@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Teste de FrontEnd para a PlanB">
+    <meta name="author" content="Laura San Martin">
+
+    <title>CAC Engenharia</title>
+
+    <link href="css/style.css" rel="stylesheet">
+
+    	<script type="text/javascript">
+
+		//Função para limpar um imput do tipo text quando estiver com o foco
+		function removeTitle(elementID, title)
+		{
+			var inputObject = document.getElementById(elementID);
+			if(inputObject.value == title) { inputObject.value = ''; }
+		}
+
+		//Função para adicionar um titulo a um imput do tipo text quando o mesmo perder o foco e estiver vazio
+		function addTitle(elementID, title)
+		{
+			var inputObject = document.getElementById(elementID);
+			
+			if(inputObject.value == '') 
+			{ 
+				inputObject.value = title; 
+			}
+		}
+	</script>
+</head>
+<body >
+	<!-- Uso uma imagem base com tranparência e tento alinhar os objetos html por cima -->
+	<!--<img style="position: absolute;" src="./img/Teste_frontend (1).jpg">-->
+	
+	<div class="dobra06">
+		<h1>Conheça quem conhece a CAC:</h1>
+
+		<div class="dobra06Thumbs">
+			<img src="img/thumb1.png">
+			<h2>Patrícia Candeia</h2>
+			<p>“É a realização de um sonho adquirir minha casa e sair do aluguel. Estou muito feliz!”</p>
+		</div>
+
+		<div class="dobra06Thumbs">
+			<img src="img/thumb2.png">
+			<h2>Emerson Rodrigues</h2>
+			<p>“Fiquei muito feliz, estava tudo lindo do jeito que eu imaginava.”</p>
+		</div>
+
+		<div class="dobra06Thumbs">
+			<img src="img/thumb3.png">
+			<h2>Nathália Evelyn</h2>
+			<p>“A qualidade do acabamento me surpreendeu muito. Além disso, o atendimento da CAC me tirou todas as dúvidas.”</p>
+		</div>
+	</div>
+
+	<div class="dobra07">
+		<h1>Adquira seu imóvel</h1>
+		<p>
+			<strong>Não perca a chance de construir seu futuro com a CAC - Engenharia! </strong>
+			Preencha o formulário abaixo, fale com um de nossos corretores e comece a planejar seu futuro hoje mesmo. <strong>É rápido e fácil!</strong>
+		</p>
+		<form>
+			<input type="text" id="nomeTextInput" name="nomeTextInput" value="Nome" onblur="addTitle(this.id,'Nome')" onfocus="removeTitle(this.id,'Nome')""></input>
+			<input type="text" id="emailTextInput" name="emailTextInput" value="E-mail"	onblur="addTitle(this.id,'E-mail')" onfocus="removeTitle(this.id,'E-mail')"></input>
+			<input type="text" id="telefoneTextInput" name="telefoneTextInput" value="Telefone" onblur="addTitle(this.id,'Telefone')" onfocus="removeTitle(this.id,'Telefone')"></input>
+			<input type="text" id="mensagemTextInput" name="mensagemTextInput" value="Mensagem" onblur="addTitle(this.id,'Mensagem')" onfocus="removeTitle(this.id,'Mensagem')"></input>
+			<input type="submit" id="submitButton" name="submitButton" value="Enviar"></input>
+		</form>
+	</div>
+
+	<footer class="rodape">
+		<div class="rodapeTelefone" >
+			<img src="./img/whatsSymbol.png">
+				<p>(31) xxxx-xxxx</p>
+				<p>Rua Gabriela de Melo, 351 - Bairro Olhos D’Água - Belo Horizonte / MG</p>
+		</div>
+	</footer>
+
+</body>
